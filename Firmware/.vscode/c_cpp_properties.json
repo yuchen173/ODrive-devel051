@@ -1,0 +1,81 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/Private/**",
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "__arm__",
+                "STM32F722xx",
+                "FPU_FPV5",
+                "USE_HAL_DRIVER",
+                "HW_VERSION_MAJOR=4",
+                "HW_VERSION_MINOR=1",
+                "HW_VERSION_VOLTAGE=58",
+                "__weak=\"__attribute__((weak))\"",
+                "__packed=\"__attribute__((__packed__))\"",
+                "__GNUC__"
+            ],
+            "intelliSenseMode": "gcc-arm",
+            "compilerPath": "arm-none-eabi-g++.exe",
+            "compilerArgs": [
+                "-mthumb",
+                "-mcpu=cortex-m7",
+                "-mfpu=fpv5-sp-d16",
+                "-mfloat-abi=hard",
+                "-specs=nosys.specs",
+                "-specs=nano.specs",
+                "-u _printf_float",
+                "-u _scanf_float"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "__arm__",
+                "STM32F405xx",
+                "FPU_FPV4",
+                "USE_HAL_DRIVER",
+                "HW_VERSION_MAJOR=4",
+                "HW_VERSION_MINOR=1",
+                "HW_VERSION_VOLTAGE=58",
+                "__weak=\"__attribute__((weak))\"",
+                "__packed=\"__attribute__((__packed__))\"",
+                "__GNUC__"
+            ],
+            "intelliSenseMode": "gcc-arm",
+            "compilerPath": "arm-none-eabi-g++ -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -specs=nosys.specs -specs=nano.specs -u _printf_float -u _scanf_float",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        },
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "__arm__",
+                "STM32F405xx",
+                "FPU_FPV4",
+                "USE_HAL_DRIVER",
+                "HW_VERSION_MAJOR=4",
+                "HW_VERSION_MINOR=1",
+                "HW_VERSION_VOLTAGE=58",
+                "__weak=\"__attribute__((weak))\"",
+                "__packed=\"__attribute__((__packed__))\"",
+                "__GNUC__"
+            ],
+            "intelliSenseMode": "gcc-arm",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
